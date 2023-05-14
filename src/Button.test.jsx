@@ -1,14 +1,12 @@
-import { describe, it, expect } from 'vitest';
+import { describe, it } from 'vitest';
 
 import Button from './components/Button';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 
 describe('Button', () => {
-  it('renders a button with text', () => {
-    render(<Button buttonText={"Text"} />)
-  });
+  it('renders Button component', () => {
+    render(<Button text={"Button Text"} color={"bg-darkGrey"} textColor={"text-black"}/>);
 
-  it('false to be false', () => {
-    expect(false).toBe(false);
+    screen.debug();
   });
 });

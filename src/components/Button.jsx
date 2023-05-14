@@ -2,27 +2,23 @@ import PropTypes from "prop-types"
 
 const Button = (props) => {
 
-  const { buttonText, count, setCartAmount  } = props;
-
-  const handleAddToCart = () => {
-    setCartAmount(prevCount => prevCount + count)
-  }
+  const { text, color, textColor } = props;
 
   return (
     <div>
-        <button className="flex justify-center items-center
-         bg-black w-[272px] h-[56px] rounded-xl hover:opacity-70 text-white"
-         onClick={handleAddToCart}>      
-            <p className="font-bold text-white ml-2">{buttonText}</p>
+        <button className={`flex justify-center items-center
+        w-[272px] h-[56px] rounded-xl hover:opacity-70 ${textColor} ${color}`}
+        >      
+            <p className="font-bold ml-2">{text}</p>
         </button>
     </div>
   )
 }
 
 Button.propTypes = {
-  buttonText: PropTypes.string,
-  count: PropTypes.number,
-  setCartAmount: PropTypes.func
+  text: PropTypes.string,
+  color: PropTypes.string,
+  textColor: PropTypes.string,
 };
 
 export default Button

@@ -1,11 +1,13 @@
 import Button from "./components/Button"
+import Navbar from "./components/Navbar"
 
 function App() {
   
 
   return (
     <div>
-      <Button buttonText={"Heres a button"}/>
+      <Navbar />
+      <Button text={"Heres a button"} color={"bg-orange"} textColor={"text-black"} />
     </div>
   )
 }
