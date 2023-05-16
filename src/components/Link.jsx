@@ -6,7 +6,8 @@ const Link = (props) => {
 
   return (
     <div>
-        <a className="p-4 hover:underline underline-offset-[46px] decoration-orange decoration-4" href={link}>{text}</a>
+        <a className="p-4 hover:underline underline-offset-[46px]
+        decoration-orange decoration-4" href={link}>{text}</a>
     </div>
   )
 }
